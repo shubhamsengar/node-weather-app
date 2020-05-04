@@ -12,7 +12,7 @@ const forecast = function(latitude,longitude,callback){
             callback('Unbable to find location services.',undefined);
         }
         else{
-            callback(undefined,"SUMMARY:"+body.current.weather_descriptions[0]+". Current temperature is "+body.current.temperature+" degree celcius. It feels like "+body.current.feelslike+" degree celcius. \nChances of raining are, "+body.current.precip+"%.");
+            callback(undefined,"Current temperature is "+body.current.temperature+" degree celcius. It feels like "+body.current.feelslike+" degree celcius. \nChances of raining are, "+body.current.precip+"%. Current humididy is "+body.current.humidity+"."+ " SUMMARY:"+body.current.weather_descriptions[0]+".");
         }
     });
 
