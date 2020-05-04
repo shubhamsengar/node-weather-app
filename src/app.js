@@ -21,6 +21,9 @@ hbs.registerPartials(partialsPath);
 app.use(express.static( publicDirectoryPath ) );
 
 
+const port = process.env.PORT || 3000;
+
+
 app.get('',(req,res)=>{
     
     res.render('index',{
@@ -87,4 +90,6 @@ app.get('*',(req,res) =>{
 });
 
 
-app.listen(3000);
+app.listen(port, () =>{
+    console.log('server is up on port ',port);
+});
